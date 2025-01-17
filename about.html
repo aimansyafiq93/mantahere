@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Wan Mohamad Aiman Syafiq</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin: 0;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add a line under the links on hover */
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Navigation Bar Hover Effect */
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        header {
+            font-size: 30px;
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+        }
+
+        /* Main Content */
+        main {
+            font-size: 25px;
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            position: relative;
+            color: white;
+            margin: 20px;
+            padding: 40px;
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            video {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body onload="fadeIn()">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+			<li><a href="education.html">Education</a></li>
+			<li><a href="experience.html">Experience</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <img src="image2.jpg" alt="Profile Image" class="profile-img">
+            <p>
+                Hi! I'm <strong>Wan Mohamad Aiman Syafiq Bin Wan Nasrullah</strong> and people call me Manta. I'm 20 years old and a diploma student in information management at Universiti Teknologi MARA (UiTM) Kelantan Campus Machang. 
+                I am an athlete representing UiTM Kelantan in football and futsal and have competed in the Karnival Sukan Mahasiswa (KARISMA) at UiTM Pulau Pinang Campus Permatang Pauh.
+            </p>
+        </section>
+    </main>
+	
+	<!-- Hero Section -->
+    <header>
+        <h1>My Hobby</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+        <!-- Video Section -->
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <!-- Video 1 -->
+            <video controls width="500" height= "540" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+                <source src="video5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Video 2 -->
+            <video controls width="300" height= "540" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+                <source src="video6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Hobby Description -->
+        <p style="margin-top: 20px;">
+            My hobbies are playing football and futsal. In the evening, I will always go to the field or futsal court to fill my free time. Apart from playing football and futsal, I also jog around the campus in the morning on holidays and in the afternoon on weekdays.
+        </p>
+        </section>
+    </main>
+
+	
+	<!-- Hero Section -->
+    <header>
+        <h1>About My Family</h1>
+    </header>
+	
+	<!-- Main Content -->
+    <main>
+        <section>
+	        <img src="image11.jpg" alt="Profile Image" class="profile-img">
+			<p> I am the second child of three siblings. I have an older sister who is 23 years old and a younger sister who is 14 years old. I am from Kuantan, Pahang. I am the only boy in my family.</p>
+        </section>
+    </main>
+	
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wan Mohamad Aiman Syafiq. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/wnaimannnnn" target="_blank">
+                <img src="image3.jpg" alt="Instagram" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 10px;">
+            </a>
+            <a href="https://www.instagram.com/wnaimannnnn" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+
+            <a href="https://www.tiktok.com/@mantahere" target="_blank">
+                <img src="image4.jpg" alt="Tiktok" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 10px;">
+            </a>
+            <a href="https://www.tiktok.com/@mantahere" target="_blank" style="color: white; text-decoration: none;">Tiktok</a>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in effect on page load
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>

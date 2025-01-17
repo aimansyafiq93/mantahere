@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experiences</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin: 0;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        header {
+		    font-size: 30px;
+			font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+		    font-size: 20px;
+			font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            color: white;
+            margin: 20px;
+            padding: 50px;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        footer .social-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body onload="fadeIn()">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+			<li><a href="education.html">Education</a></li>
+			<li><a href="experience.html">Experience</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Experiences</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Experience 1</h2>
+            <img src="image12.jpg" alt="Experience 1 Image">
+            <p>Winning the Sukan Antara Fakulti (SAF) at UiTM Machang.</p>
+
+            <h2>Experience 2</h2>
+            <img src="image13.jpg" alt="Experience 2 Image">
+            <p>Representing UiTM Kelantan in the Karnival Sukan Mahasiswa (KARISMA) for futsal.</p>
+
+            <h2>Experience 3</h2>
+            <img src="image14.jpg" alt="Experience 3 Image">
+            <p>Representing UiTM Kelantan in the Karnival Sukan Mahasiswa (KARISMA) for football.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wan Mohamad Aiman Syafiq. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/wnaimannnnn/profilecard/?igsh=MXNoM2hiNnVqbGFkMA==" target="_blank">
+                <img src="image3.jpg" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://www.tiktok.com/@mantahere?_t=8sIicjiw5wH&_r=1" target="_blank">
+                <img src="image4.jpg" alt="TikTok">
+                TikTok
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in effect on page load
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
